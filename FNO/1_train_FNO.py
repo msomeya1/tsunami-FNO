@@ -8,9 +8,9 @@ from model_FNO import TsunamiFNO, count_params
 
 
 class config:
-    indir = "../../data/dataset"
+    indir = "../data/dataset"
     outdir = "out"
-    bathy_file = "../../share/Hyuganada.grd"
+    bathy_file = "../share/Hyuganada.grd"
     Ntrain = 2000
     Nvalid = 200
     Nlon = 251
