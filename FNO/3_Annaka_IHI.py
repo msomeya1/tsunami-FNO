@@ -40,10 +40,10 @@ cmap.set_bad(color='gray')
 
 
 
-with open("../../share/StationName_DONET2Nnet.txt") as f:
+with open("../share/StationName_DONET2Nnet.txt") as f:
     Stations = [s.rstrip() for s in f.readlines()]
 
-lonlat = np.loadtxt("../../share/LonLat_DONET2Nnet.txt")
+lonlat = np.loadtxt("../share/LonLat_DONET2Nnet.txt")
 lon_st = lonlat[:,0]
 lat_st = lonlat[:,1]
 Nst = len(lon_st)
@@ -58,7 +58,7 @@ for idx in idx_selected:
 Nx = Nlon + 5
 Ny = Nlat + 5
 bathy = np.zeros((Nx, Ny), dtype=np.float32)
-grd = xr.open_dataset("../../share/Hyuganada.grd")
+grd = xr.open_dataset("../share/Hyuganada.grd")
 bathy0 = grd.z.data.reshape(Nlat, Nlon)
 
 nanmask = np.ones_like(bathy0, dtype=float)
@@ -105,7 +105,7 @@ for ist in range(Nst):
     i = my_round((lon-lon_min)/dlon)
     j = my_round((lat-lat_min)/dlat)
 
-    eta = np.loadtxt(f"../../data/Annaka/tgs-txt/{station}.txt")[::60]
+    eta = np.loadtxt(f"../data/Annaka/tgs-txt/{station}.txt")[::60]
 
     obs_cache[station] = (i, j, eta)
 
