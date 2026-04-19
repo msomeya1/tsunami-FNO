@@ -19,7 +19,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print(device)
 print(torch.cuda.device_count())
 
-outdir = "syn2"
+outdir = "FPI"
 os.makedirs(outdir, exist_ok=True)
 
 
