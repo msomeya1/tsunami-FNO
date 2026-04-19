@@ -38,10 +38,10 @@ cmap = mpl.colormaps.get_cmap("seismic")
 cmap.set_bad(color='gray')
 
 
-with open("../../share/StationName_DONET2Nnet.txt") as f:
+with open("../share/StationName_DONET2Nnet.txt") as f:
     Stations = [s.rstrip() for s in f.readlines()]
 
-lonlat = np.loadtxt("../../share/LonLat_DONET2Nnet.txt")
+lonlat = np.loadtxt("../share/LonLat_DONET2Nnet.txt")
 lon_st = lonlat[:,0]
 lat_st = lonlat[:,1]
 Nst = len(lon_st)
@@ -57,7 +57,7 @@ for idx in idx_selected:
 Nx = Nlon + 5
 Ny = Nlat + 5
 bathy = np.zeros((Nx, Ny), dtype=np.float32)
-grd = xr.open_dataset("../../share/Hyuganada.grd")
+grd = xr.open_dataset("../share/Hyuganada.grd")
 bathy0 = grd.z.data.reshape(Nlat, Nlon)
 
 nanmask = np.ones_like(bathy0, dtype=float)
@@ -69,7 +69,7 @@ bathy[2:-3, 2:-3] = bathy0
 bathy /= bathy.max()
 bathy = torch.tensor(bathy)
 
-grd_true = xr.open_dataset(f"../../data/Annaka/SD01.nc")
+grd_true = xr.open_dataset(f"../data/Annaka/SD01.nc")
 eta0_true = np.nan_to_num(grd_true.wave_height.data[0,:,:])
 eta8_true = np.nan_to_num(grd_true.wave_height.data[8,:,:])
 eta16_true = np.nan_to_num(grd_true.wave_height.data[16,:,:])
@@ -120,7 +120,7 @@ ll2xy = pyproj.Transformer.from_crs(
 
 
 df = pd.read_csv(
-    f"../../data/Annaka/fault_param.txt", comment="!", sep="\s+",
+    f"../data/Annaka/fault_param.txt", comment="!", sep="\s+",
     names = ("lat", "lon", "depth", "length", "width", "dip", "strike", "rake", "slip")
 )
 lon, lat, length, width, dip, strike = \
@@ -259,7 +259,7 @@ ts2 = np.linspace(1, 32, 32)
 for ist in range(Nst):
     station = Stations[ist]
 
-    true = np.loadtxt(f"../../data/Annaka/tgs-txt/{station}.txt")
+    true = np.loadtxt(f"../data/Annaka/tgs-txt/{station}.txt")
 
     lon = lon_st[ist]
     lat = lat_st[ist]
@@ -287,7 +287,7 @@ cnt = 0
 for idx in reversed(idx_selected):
     station = Stations[idx]
 
-    true = np.loadtxt(f"../../data/Annaka/tgs-txt/{station}.txt")
+    true = np.loadtxt(f"../data/Annaka/tgs-txt/{station}.txt")
     lon = lon_st[idx]
     lat = lat_st[idx]
     i = my_round((lon-lon_min)/dlon)
