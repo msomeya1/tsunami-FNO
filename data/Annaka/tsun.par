@@ -1,0 +1,14 @@
+&params
+gridfile="gridfile.dat"
+tgstafn="../../share/Stations_DONET2Nnet.jagurs"
+dt=1
+tend=1920
+itmap=60
+init_disp_fault=1
+fault_param_file="fault_param.txt"
+tau=0
+cf=0
+cfl=0
+coriolis=0
+velgrd=0
+/

@@ -1,0 +1,7 @@
+! Annaka, T., K. Inagaki, H. Tanaka, & K. Yanagisawa. (2003). 
+! Characteristics of great earthquakes along the Nankai trough based on numerical tsunami simulation, 
+! J. Earthq. Eng., JSCE, CD-ROM (in Japanese).
+! http://library.jsce.or.jp/jsce/open/00578/2003/27-0307.pdf
+! Fault N4
+! lat[deg], lon[deg], depth[km], length[km], width[km], dip[deg], strike[deg], rake[deg], slip[m]
+32.614 134.481 12.6 125.0 120.0 8.0 250.0 113.0 4.3
