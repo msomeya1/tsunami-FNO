@@ -42,3 +42,7 @@ Run `FNO/1_train_FNO.py` to train the FNO model.
 > PATH_TO_MODEL_PARAMETER = "out/model.pt"
 > ```
 > to the path of the downloaded file.
+
+
+## Reference
+- Masayoshi Someya, Takashi Furumura, Ryoichiro Agata. Fourier Neural Operator-Based Surrogate Modeling of Offshore Tsunami Propagation and Its Application to Rapid Tsunami Source Inversion, 11 May 2026, PREPRINT (Version 1) available at Research Square https://doi.org/10.21203/rs.3.rs-9597846/v1
