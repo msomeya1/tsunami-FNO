@@ -45,4 +45,4 @@ Run `FNO/1_train_FNO.py` to train the FNO model.
 
 
 ## Reference
-- Masayoshi Someya, Takashi Furumura, Ryoichiro Agata. Fourier Neural Operator-Based Surrogate Modeling of Offshore Tsunami Propagation and Its Application to Rapid Tsunami Source Inversion, 11 May 2026, PREPRINT (Version 1) available at Research Square https://doi.org/10.21203/rs.3.rs-9597846/v1
+- Someya, M., Furumura, T. & Agata, R. Fourier Neural Operator-based surrogate modeling of offshore tsunami propagation and its application to rapid tsunami source inversion. Earth Planets Space 78, 225 (2026). https://doi.org/10.1186/s40623-026-02552-2
